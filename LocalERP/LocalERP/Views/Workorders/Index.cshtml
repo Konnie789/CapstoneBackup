@@ -1,0 +1,137 @@
+﻿@model IEnumerable<LocalERP.Models.Workorder>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuoteRequested)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalMaterialCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalLabourCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateRequiredBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCompleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatePickedUp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientPhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstMaterialCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstLabourCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstOtherCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstTotalCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstDeliveryDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorizedBy)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuoteRequested)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalMaterialCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalLabourCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateRequiredBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCompleted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatePickedUp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientPhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstMaterialCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstLabourCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstOtherCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstTotalCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstDeliveryDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorizedBy)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

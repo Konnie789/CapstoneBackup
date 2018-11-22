@@ -1,0 +1,120 @@
+﻿@model LocalERP.Models.Workorder
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Workorder</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="QuoteRequested" /> @Html.DisplayNameFor(model => model.QuoteRequested)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalMaterialCost" class="control-label"></label>
+                <input asp-for="TotalMaterialCost" class="form-control" />
+                <span asp-validation-for="TotalMaterialCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalLabourCost" class="control-label"></label>
+                <input asp-for="TotalLabourCost" class="form-control" />
+                <span asp-validation-for="TotalLabourCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalCost" class="control-label"></label>
+                <input asp-for="TotalCost" class="form-control" />
+                <span asp-validation-for="TotalCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateCreated" class="control-label"></label>
+                <input asp-for="DateCreated" class="form-control" />
+                <span asp-validation-for="DateCreated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateRequiredBy" class="control-label"></label>
+                <input asp-for="DateRequiredBy" class="form-control" />
+                <span asp-validation-for="DateRequiredBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateCompleted" class="control-label"></label>
+                <input asp-for="DateCompleted" class="form-control" />
+                <span asp-validation-for="DateCompleted" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DatePickedUp" class="control-label"></label>
+                <input asp-for="DatePickedUp" class="form-control" />
+                <span asp-validation-for="DatePickedUp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClientPhoneNumber" class="control-label"></label>
+                <input asp-for="ClientPhoneNumber" class="form-control" />
+                <span asp-validation-for="ClientPhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClientEmail" class="control-label"></label>
+                <input asp-for="ClientEmail" class="form-control" />
+                <span asp-validation-for="ClientEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClientName" class="control-label"></label>
+                <input asp-for="ClientName" class="form-control" />
+                <span asp-validation-for="ClientName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstMaterialCost" class="control-label"></label>
+                <input asp-for="EstMaterialCost" class="form-control" />
+                <span asp-validation-for="EstMaterialCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstLabourCost" class="control-label"></label>
+                <input asp-for="EstLabourCost" class="form-control" />
+                <span asp-validation-for="EstLabourCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstOtherCost" class="control-label"></label>
+                <input asp-for="EstOtherCost" class="form-control" />
+                <span asp-validation-for="EstOtherCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstTotalCost" class="control-label"></label>
+                <input asp-for="EstTotalCost" class="form-control" />
+                <span asp-validation-for="EstTotalCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstDeliveryDate" class="control-label"></label>
+                <input asp-for="EstDeliveryDate" class="form-control" />
+                <span asp-validation-for="EstDeliveryDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorizedBy" class="control-label"></label>
+                <input asp-for="AuthorizedBy" class="form-control" />
+                <span asp-validation-for="AuthorizedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
